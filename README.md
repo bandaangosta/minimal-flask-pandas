@@ -1,6 +1,6 @@
 # Minimal Flask Pandas
 
-Minimal template project to create a web application based on Flask and using Pandas for data manipulation.
+Minimal template project to create a web application based on Flask and using Pandas for data manipulation.  
 Based on https://github.com/bandaangosta/cookiecutter-flask-minimal
 
 ## Quick Start
@@ -69,7 +69,7 @@ While in project folder, where Dockerfiles reside, run:
     docker build -t minimalflaskpandas -f Dockerfile.xxx .
     docker run -it --rm -p 80:80 --name my_minimalflaskpandas minimalflaskpandas
 
-If tested OK, you can run the app in background:
+If tested OK, you can run the app in background (will restart on reboot):
 
-   docker run --detach -p 80:80 --restart unless-stopped --name my_minimalflaskpandas minimalflaskpandas   (to run on reboot)
+    docker run --detach -p 80:80 --restart unless-stopped --name my_minimalflaskpandas minimalflaskpandas   
 
