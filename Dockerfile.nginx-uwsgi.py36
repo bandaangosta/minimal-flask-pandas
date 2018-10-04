@@ -1,0 +1,5 @@
+FROM tiangolo/uwsgi-nginx-flask:python3.6-alpine3.7
+COPY . /app
+RUN apk --update add --no-cache g++
+RUN pip install -r requirements.txt
+ENV STATIC_PATH /app/minimalflaskpandas/static

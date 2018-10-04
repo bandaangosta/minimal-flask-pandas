@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <title>Minimal Flask Pandas</title>
+  </head>
+  <body>
+    <div class="container">
+        <h2 class="container">
+            Welcome to Minimal Flask Pandas
+        </h2>
+        <table class="table table-hover table-sm" style="font-size: medium;">
+          <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+            <th>E</th>
+          </tr>
+        {% for entry in data %}
+          <tr>
+            <td>{{ entry.A }}</td>
+            <td>{{ entry.B }}</td>
+            <td>{{ entry.C }}</td>
+            <td>{{ entry.D }}</td>
+            <td>{{ entry.E }}</td>
+            <td>{{ entry.F }}</td>
+        {% else %}
+            <td colspan="5">No data found</td>
+          </tr>
+        {% endfor %}
+        </table>
+    </div>
+  </body>
+</html>
